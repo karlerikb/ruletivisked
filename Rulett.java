@@ -21,16 +21,6 @@ class Rulett {
         return arv1;
     }
 
-    static long suurimYhistegur(long[] ruletinumbrid) {
-        long arv1, arv2;
-        arv1 = ruletinumbrid[0];
-        for (int i = 1; i < ruletinumbrid.length; i++) {
-            arv2 = ruletinumbrid[i];
-            arv1 = suurimYhistegur(arv1, arv2);
-        }
-        return arv1;
-    }
-
     static long vahimYhiskordne(long arv1, long arv2) {
         return arv1 * (arv2 / suurimYhistegur(arv1, arv2));
     }
